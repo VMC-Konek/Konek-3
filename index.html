@@ -247,20 +247,6 @@ function openPayment(type){
     const openBtn = document.getElementById("openAppBtn");
     const saveBtn = document.getElementById("saveQRBtn");
 
-    // AUTO OPEN APP IF MOBILE
-    if(isMobileDevice()){
-
-        if(type === "gcash"){
-            window.location.href = gcashLink;
-            return;
-        }
-
-        if(type === "maya"){
-            window.location.href = mayaLink;
-            return;
-        }
-
-    }
 
     // OTHERWISE SHOW QR POPUP (DESKTOP)
 
@@ -560,3 +546,4 @@ window.onclick = function(event){
 </body>
 
 </html>
+
