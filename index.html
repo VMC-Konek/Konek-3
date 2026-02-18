@@ -231,23 +231,6 @@ body{
 
 <script>
 
-// Detect if mobile device
-function isMobileDevice() {
-    return /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
-}
-
-function openPayment(type){
-
-    const gcashLink = "https://gcash.me/09175159700";
-    const mayaLink = "https://maya.ph/pay/yourusername";
-
-    const modal = document.getElementById("paymentModal");
-    const title = document.getElementById("paymentTitle");
-    const qr = document.getElementById("paymentQR");
-    const openBtn = document.getElementById("openAppBtn");
-    const saveBtn = document.getElementById("saveQRBtn");
-
-
     // OTHERWISE SHOW QR POPUP (DESKTOP)
 
     if(type === "gcash"){
@@ -546,4 +529,5 @@ window.onclick = function(event){
 </body>
 
 </html>
+
 
