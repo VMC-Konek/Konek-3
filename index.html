@@ -20,7 +20,15 @@ body{
     background:white;
     min-height:100vh;
 }
+.card{
+      background:#fff; padding:5px; 
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
 
+.konek-img{
+    width:100px;
+    height:30px;
+    object-fit:cover;}
 /* HEADER */
 .header{
     background:#1d1d1b;
@@ -288,7 +296,10 @@ window.onclick = function(event){
 
 </script>
 <body>
-
+<div class="container">
+     <div class="card">
+           <img src="koneeeeek copy.png" class="konek-img">
+         </div>
 <div class="container">
 
     <!-- HEADER -->
@@ -445,7 +456,7 @@ window.onclick = function(event){
         <a id="saveQRBtn" href="#" download class="modal-btn save-btn">
             Save QR Code
         </a>
-
+     <div class="hint">Powered by Konek.</div>
     </div>
         </div>
 
@@ -539,6 +550,7 @@ window.onclick = function(event){
 </body>
 
 </html>
+
 
 
 
