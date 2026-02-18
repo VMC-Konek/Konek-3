@@ -231,15 +231,21 @@ body{
 
 <script>
 
-    // OTHERWISE SHOW QR POPUP (DESKTOP)
+function openPayment(type){
+
+    const modal = document.getElementById("paymentModal");
+    const title = document.getElementById("paymentTitle");
+    const qr = document.getElementById("paymentQR");
+    const openBtn = document.getElementById("openAppBtn");
+    const saveBtn = document.getElementById("saveQRBtn");
 
     if(type === "gcash"){
 
         title.innerText = "Pay via GCash";
 
-        qr.src = "gcash-qr.png";
+        qr.src = "gcash-qr.png"; // your QR image file
 
-        openBtn.href = gcashLink;
+        openBtn.href = "https://gcash.me/09175159700";
 
         saveBtn.href = "gcash-qr.png";
 
@@ -249,9 +255,9 @@ body{
 
         title.innerText = "Pay via Maya";
 
-        qr.src = "maya-qr.png";
+        qr.src = "maya-qr.png"; // your QR image file
 
-        openBtn.href = mayaLink;
+        openBtn.href = "https://maya.ph/pay/yourusername";
 
         saveBtn.href = "maya-qr.png";
 
@@ -262,16 +268,20 @@ body{
 }
 
 function closePayment(){
+
     document.getElementById("paymentModal").style.display = "none";
+
 }
 
-// Close if clicking outside
+/* close when clicking outside */
 window.onclick = function(event){
 
     const modal = document.getElementById("paymentModal");
 
     if(event.target == modal){
+
         modal.style.display = "none";
+
     }
 
 }
@@ -529,5 +539,6 @@ window.onclick = function(event){
 </body>
 
 </html>
+
 
 
